@@ -1,6 +1,6 @@
 <template>
   <div class="text-h4 text-blue-darken-4 pl-5 pt-10">Encourage sharing</div>
-  <v-container class="pa-15" fluid>
+  <v-container class="pa-lg-15" fluid>
     <v-alert v-if="saveStatus != 'none' && saveStatus == 'success'" class="mb-5" type="success"
       title="Thank you for your contribution" text="your message has been saved successfully"></v-alert>
     <v-alert v-if="saveStatus != 'none' && saveStatus == 'failed'" class="mb-5" type="error" title="FAILED"

@@ -2,13 +2,16 @@
   <div class="text-h4 text-blue-darken-4 pl-5 pt-10">Encourages <v-btn icon="mdi-plus" size="small"
       to="/add-encourage"></v-btn></div>
 
-  <v-carousel class="pt-10" cycle height="520" hide-delimiter-background show-arrows="hover">
+  <v-carousel class="pt-10" cycle height="520" hide-delimiter-background :show-arrows="false">
     <v-carousel-item v-for="({ attributes, id }, i) in encourages.data" :key="i">
       <div class="ma-sm-10"><v-card>
           <v-img :src="photos[i % photos.length]" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="240pt" cover>
-            <v-card-text class="text-white text-lg-h2 text-md-h3 text-sm-h5 text-xs-h7 ma-xl-10"> {{ attributes.message
-            }}</v-card-text>
+            <v-row>
+              <v-col class="text-white text-lg-h2 text-md-h2 text-sm-h4 pa-10">
+                {{ attributes.message}}
+              </v-col>
+            </v-row>
           </v-img>
 
           <v-card-actions>
